@@ -1,0 +1,31 @@
+﻿Wormhole,,,,,,,,,,,,,,
+,Attention,,,,,,,,,,,,,
+,Profiler on WH Metal,,,,,Profiler on Polaris,,,,,operator HW/Polaris ratio,,,
+,Operator Name,Count,Total Time (ms),Percentage (%),,Operator,Count,Total Time (ms),Percentage of Network Time,,Operator,WH Metal Time (ms),Polaris Time (ms),HW / Polaris Ratio
+,MatMul,6,2.020109,43.94,,Add,5,0.013133,11.88%,,MatMul,2.020109,0.061452,32.86×
+,Tilize (with padding),3,0.699609,15.22,,MatMul,6,0.061452,55.61%,,Reshape,0.372759,0.011394,32.73×
+,Transpose,3,0.49529,10.77,,Mul,1,0,0.00%,,Softmax,0.104472,0.01313,7.96×
+,Add,6,0.431774,9.39,,Reshape,4,0.011394,10.31%,,Transpose,0.49529,0.011394,43.48×
+,Reshape,4,0.372759,8.11,,Softmax,1,0.01313,11.88%,,Add,0.43174,0.013133,32.88x
+,Permute,1,0.164057,3.57,,Transpose,4,0.011394,10.31%,,,,,
+,Untilize (with unpadding),1,0.153877,3.35,,Grand Total,,0.110503 ms,100%,,,,,
+,Untilize,3,0.121002,2.63,,,,,,,,,,
+,Softmax,1,0.104472,2.27,,,,,,,,,,
+,Tilize,1,0.034516,0.75,,,,,,,,,,
+,Grand Total,,4.5975 ms,100%,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Intermediate,,,,,,,,,,,,,
+,Chip,,,,,Polaris,,,,,operator HW/Polaris ratio,,,
+,Operator,Count,Total Time (ms),Percentage (%),,Operator,Count,Total Time (ms),Percentage of Network Time,,Operator,WH Metal Time (ms),Polaris Time (ms),HW / Polaris Ratio
+,MatMul,1,0.526871,56.1,,Add,1,0,0.00%,,MatMul,0.526871,0.034998,15.06×
+,Gelu,1,0.223498,23.8,,Gelu,1,0,0.00%,,,,,
+,Binary Ng,1,0.188784,20.1,,MatMul,1,0.034998,100.00%,,,,,
+,Grand Total,,0.9392 ms,100%,,Grand Total,,0.034998 ms,100%,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Output,,,,,,,,,,,,,
+,Chip,,,,,Polaris,,,,,operator HW/Polaris ratio,,,
+,Operator,Count,Total Time (ms),Percentage (%),,Operator,Count,Total Time (ms),Percentage of Network Time,,Operator,WH Metal Time (ms),Polaris Time (ms),HW / Polaris Ratio
+,Matmul,1,1.129745,92.68,,Add,2,0.005664,13.93%,,MatMul,1.129745,0.034998,32.28×
+,Add,2,0.089258,7.32,,MatMul,1,0.034998,86.07%,,Add,0.089258,0.005664,15.75x
+,Grand Total,,1.2190 ms,100%,,Grand Total,,0.040662 ms,100%,,,,,
