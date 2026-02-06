@@ -1,0 +1,50 @@
+
+Chip:
+
+
+TT_METAL_DEVICE_PROFILER=1 \
+python -m tracy -p -r -m pytest \
+   temp_testing/test_ttnn_functional_vit_hw.py::test_vit_attention
+
+TT_METAL_DEVICE_PROFILER=1 \
+python -m tracy -p -r -m pytest \
+   temp_testing/test_ttnn_functional_vit_hw.py::test_vit_intermediate
+
+
+TT_METAL_DEVICE_PROFILER=1 \
+python -m tracy -p -r -m pytest \
+   temp_testing/test_ttnn_functional_vit_hw.py::test_vit_output
+
+
+==================================================================================================================
+
+Polaris:
+
+python polaris.py --odir __vit_attention --study runall --wlspec config/all_workloads.yaml --archspec config/tt_wh.yaml --wlmapspec config/wl2archmapping.yaml --filterwlg ttnn --filterarch n150 --filterwl vit_attention --dump_stats_csv
+
+python polaris.py --odir __vit_intermediate --study runall --wlspec config/all_workloads.yaml --archspec config/tt_wh.yaml --wlmapspec config/wl2archmapping.yaml --filterwlg ttnn --filterarch n150 --filterwl vit_intermediate --dump_stats_csv
+
+python polaris.py --odir __vit_output --study runall --wlspec config/all_workloads.yaml --archspec config/tt_wh.yaml --wlmapspec config/wl2archmapping.yaml --filterwlg ttnn --filterarch n150 --filterwl vit_output --dump_stats_csv
+
+==================================================================================================================
+
+API (all_workloads.yaml)
+
+ - api: TTNN
+    name: vit_attention
+    basedir: workloads/ttnn/vit
+    module : run_vit_attention@run_ttnn_functional_vit.py
+    instances:
+      vit_b16_attention: { bs: 1, model_name: vit-b16-attention}
+ - api: TTNN
+    name: vit_intermediate
+    basedir: workloads/ttnn/vit
+    module : run_vit_intermediate@run_ttnn_functional_vit.py
+    instances:
+      vit_b16_intermediate: { bs: 1, model_name: vit-b16-intermediate}
+ - api: TTNN
+    name: vit_output
+    basedir: workloads/ttnn/vit
+    module : run_vit_output@run_ttnn_functional_vit.py
+    instances:
+      vit_b16_output: { bs: 1, model_name: vit-b16-output}
