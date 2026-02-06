@@ -1,29 +1,29 @@
-﻿Multi-Core Performance,,,,,,,,,,,,
-,Matrix Size,Total %,Device,Device Time,Op-to-Op Gap,Cores,FLOPs,FLOPs %,Math Fidelity,Polaris Time (μs),Metal Time (μs),Metal/Polaris Ratio
-,32 x 32 x 32,5.80%,0,2 μs,27 μs,1,0.0 TFLOPs,3.60%,HiFi4 BFP8 x BFP8 =&gt; BFP8,0.1125,2,17.78
-,64 x 64 x 64,5.70%,0,3 μs,26 μs,4,0.2 TFLOPs,4.90%,HiFi4 BFP8 x BFP8 =&gt; BFP8,0.198,3,15.15
-,96 x 96 x 96,5.70%,0,3 μs,27 μs,9,0.5 TFLOPs,5.50%,HiFi4 BFP8 x BFP8 =&gt; BFP8,0.363,3,8.26
-,128 x 128 x 128,6.40%,0,4 μs,26 μs,16,1.0 TFLOPs,5.80%,HiFi4 BFP8 x BFP8 =&gt; BFP8,0.598,4,6.69
-,160 x 160 x 160,5.00%,0,5 μs,23 μs,25,1.6 TFLOPs,6.30%,HiFi4 BFP8 x BFP8 =&gt; BFP8,0.898,5,5.57
-,192 x 192 x 192,5.50%,0,6 μs,26 μs,36,2.4 TFLOPs,6.50%,HiFi4 BFP8 x BFP8 =&gt; BFP8,1.262,6,4.75
-,224 x 224 x 224,5.60%,0,7 μs,23 μs,49,3.1 TFLOPs,6.20%,HiFi4 BFP8 x BFP8 =&gt; BFP8,1.697,7,4.12
-,256 x 256 x 256,5.60%,0,8 μs,22 μs,64,4.0 TFLOPs,6.00%,HiFi4 BFP8 x BFP8 =&gt; BFP8,2.197,8,3.64
-,288 x 288 x 288,5.40%,0,15 μs,17 μs,64,3.2 TFLOPs,4.90%,HiFi4 BFP8 x BFP8 =&gt; BFP8,2.76,15,5.43
-,320 x 320 x 320,5.20%,0,17 μs,15 μs,64,3.9 TFLOPs,5.90%,HiFi4 BFP8 x BFP8 =&gt; BFP8,3.397,17,5
-,352 x 352 x 352,4.90%,0,18 μs,12 μs,64,4.7 TFLOPs,7.20%,HiFi4 BFP8 x BFP8 =&gt; BFP8,4.098,18,4.39
-,416 x 416 x 416,5.50%,0,32 μs,4 μs,64,4.5 TFLOPs,6.90%,HiFi4 BFP8 x BFP8 =&gt; BFP8,5.698,32,5.62
-,448 x 448 x 448,6.40%,0,45 μs,1 μs,64,4.0 TFLOPs,6.10%,HiFi4 BFP8 x BFP8 =&gt; BFP8,6.598,45,6.82
-,480 x 480 x 480,6.60%,0,48 μs,1 μs,64,4.6 TFLOPs,6.90%,HiFi4 BFP8 x BFP8 =&gt; BFP8,7.56,48,6.35
-,,,,,,,,,,,,
-,,,,,,,,,,,,
-Single Core Performance,,,,,,,,,,,,
-,Matrix Size,Total %,Device,Device Time,Op-to-Op Gap,Cores,FLOPs,FLOPs %,Math Fidelity,Polaris Time (μs),Metal Time (μs),Metal/Polaris Ratio
-,32 x 32 x 32,9.90%,0,2 μs,57 μs,1,0.0 TFLOPs,3.70%,HiFi4 BFP8 x BFP8 =&gt; BFP8,0.000097,2,"20,618.56"
-,64 x 64 x 64,6.90%,0,2 μs,53 μs,1,0.2 TFLOPs,20.60%,HiFi4 BFP8 x BFP8 =&gt; BFP8,0.00033,2,"6,060.61"
-,96 x 96 x 96,4.80%,0,4 μs,45 μs,1,0.5 TFLOPs,44.40%,HiFi4 BFP8 x BFP8 =&gt; BFP8,0.000963,4,"4,153.69"
-,128 x 128 x 128,6.00%,0,7 μs,38 μs,1,0.6 TFLOPs,57.50%,HiFi4 BFP8 x BFP8 =&gt; BFP8,0.002197,7,"3,186.16"
-,160 x 160 x 160,6.30%,0,13 μs,34 μs,1,0.6 TFLOPs,60.10%,HiFi4 BFP8 x BFP8 =&gt; BFP8,0.00423,13,"3,073.29"
-,224 x 224 x 224,5.60%,0,30 μs,14 μs,1,0.7 TFLOPs,71.80%,HiFi4 BFP8 x BFP8 =&gt; BFP8,0.011497,30,"2,609.38"
-,256 x 256 x 256,5.90%,0,41 μs,7 μs,1,0.8 TFLOPs,79.60%,HiFi4 BFP8 x BFP8 =&gt; BFP8,0.01713,41,"2,393.46"
-,288 x 288 x 288,6.70%,0,58 μs,2 μs,1,0.8 TFLOPs,80.20%,HiFi4 BFP8 x BFP8 =&gt; BFP8,0.024363,58,"2,380.66"
-,320 x 320 x 320,7.40%,0,77 μs,2 μs,1,0.8 TFLOPs,82.60%,HiFi4 BFP8 x BFP8 =&gt; BFP8,0.033397,77,"2,305.60"
+﻿Multi-Core Performance,,,,,,,,,,,,,,
+,Matrix Size,Total %,Device,Device Time,Op-to-Op Gap,Cores,FLOPs,FLOPs %,Math Fidelity,Polaris Time (μs),Metal Time (μs),Metal/Polaris Ratio,,
+,32 x 32 x 32,5.80%,0,2 μs,27 μs,1,0.0 TFLOPs,3.60%,HiFi4 BFP8 x BFP8 =&gt; BFP8,0.1125,2,17.78,,
+,64 x 64 x 64,5.70%,0,3 μs,26 μs,4,0.2 TFLOPs,4.90%,HiFi4 BFP8 x BFP8 =&gt; BFP8,0.198,3,15.15,,
+,96 x 96 x 96,5.70%,0,3 μs,27 μs,9,0.5 TFLOPs,5.50%,HiFi4 BFP8 x BFP8 =&gt; BFP8,0.363,3,8.26,,
+,128 x 128 x 128,6.40%,0,4 μs,26 μs,16,1.0 TFLOPs,5.80%,HiFi4 BFP8 x BFP8 =&gt; BFP8,0.598,4,6.69,,
+,160 x 160 x 160,5.00%,0,5 μs,23 μs,25,1.6 TFLOPs,6.30%,HiFi4 BFP8 x BFP8 =&gt; BFP8,0.898,5,5.57,,
+,192 x 192 x 192,5.50%,0,6 μs,26 μs,36,2.4 TFLOPs,6.50%,HiFi4 BFP8 x BFP8 =&gt; BFP8,1.262,6,4.75,,
+,224 x 224 x 224,5.60%,0,7 μs,23 μs,49,3.1 TFLOPs,6.20%,HiFi4 BFP8 x BFP8 =&gt; BFP8,1.697,7,4.12,,
+,256 x 256 x 256,5.60%,0,8 μs,22 μs,64,4.0 TFLOPs,6.00%,HiFi4 BFP8 x BFP8 =&gt; BFP8,2.197,8,3.64,,
+,288 x 288 x 288,5.40%,0,15 μs,17 μs,64,3.2 TFLOPs,4.90%,HiFi4 BFP8 x BFP8 =&gt; BFP8,2.76,15,5.43,,
+,320 x 320 x 320,5.20%,0,17 μs,15 μs,64,3.9 TFLOPs,5.90%,HiFi4 BFP8 x BFP8 =&gt; BFP8,3.397,17,5,,
+,352 x 352 x 352,4.90%,0,18 μs,12 μs,64,4.7 TFLOPs,7.20%,HiFi4 BFP8 x BFP8 =&gt; BFP8,4.098,18,4.39,,
+,416 x 416 x 416,5.50%,0,32 μs,4 μs,64,4.5 TFLOPs,6.90%,HiFi4 BFP8 x BFP8 =&gt; BFP8,5.698,32,5.62,,
+,448 x 448 x 448,6.40%,0,45 μs,1 μs,64,4.0 TFLOPs,6.10%,HiFi4 BFP8 x BFP8 =&gt; BFP8,6.598,45,6.82,,
+,480 x 480 x 480,6.60%,0,48 μs,1 μs,64,4.6 TFLOPs,6.90%,HiFi4 BFP8 x BFP8 =&gt; BFP8,7.56,48,6.35,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+Single Core Performance,,,,,,,,,,,,,,
+,Matrix Size,Total %,Device,Device Time,Op-to-Op Gap,Cores,FLOPs,FLOPs %,Math Fidelity,Polaris Time (μs),Metal Time (μs),Metal/Polaris Ratio,,
+,32 x 32 x 32,9.90%,0,2 μs,57 μs,1,0.0 TFLOPs,3.70%,HiFi4 BFP8 x BFP8 =&gt; BFP8,0.097,2,20.62,,
+,64 x 64 x 64,6.90%,0,2 μs,53 μs,1,0.2 TFLOPs,20.60%,HiFi4 BFP8 x BFP8 =&gt; BFP8,0.33,2,6.06,,
+,96 x 96 x 96,4.80%,0,4 μs,45 μs,1,0.5 TFLOPs,44.40%,HiFi4 BFP8 x BFP8 =&gt; BFP8,0.963,4,4.15,,
+,128 x 128 x 128,6.00%,0,7 μs,38 μs,1,0.6 TFLOPs,57.50%,HiFi4 BFP8 x BFP8 =&gt; BFP8,2.197,7,3.19,,
+,160 x 160 x 160,6.30%,0,13 μs,34 μs,1,0.6 TFLOPs,60.10%,HiFi4 BFP8 x BFP8 =&gt; BFP8,4.23,13,3.07,,
+,224 x 224 x 224,5.60%,0,30 μs,14 μs,1,0.7 TFLOPs,71.80%,HiFi4 BFP8 x BFP8 =&gt; BFP8,11.497,30,2.61,,
+,256 x 256 x 256,5.90%,0,41 μs,7 μs,1,0.8 TFLOPs,79.60%,HiFi4 BFP8 x BFP8 =&gt; BFP8,17.13,41,2.39,,
+,288 x 288 x 288,6.70%,0,58 μs,2 μs,1,0.8 TFLOPs,80.20%,HiFi4 BFP8 x BFP8 =&gt; BFP8,24.363,58,2.38,,
+,320 x 320 x 320,7.40%,0,77 μs,2 μs,1,0.8 TFLOPs,82.60%,HiFi4 BFP8 x BFP8 =&gt; BFP8,33.397,77,2.31,,
